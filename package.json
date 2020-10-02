@@ -15,10 +15,25 @@
     "type": "git",
     "url": "git+https://github.com/pyymenta/spacecraft-cli.git"
   },
-  "keywords": ["typescript", "spacecraft", "help-wanted", "digitalocean", "beginner-friendly", "hacktoberfest", "hacktoberfest2020", "javascript", "cli", "challenge", "jest"],
+  "keywords": [
+    "typescript",
+    "spacecraft",
+    "help-wanted",
+    "digitalocean",
+    "beginner-friendly",
+    "hacktoberfest",
+    "hacktoberfest2020",
+    "javascript",
+    "cli",
+    "challenge",
+    "jest"
+  ],
   "scripts": {
     "start": "node dist/cli.js",
     "build": "tsc --build .tsconfig.json",
     "test": "jest --no-cache"
+  },
+  "dependencies": {
+    "readline": "^1.3.0"
   }
 }
