@@ -8,15 +8,21 @@ export default class Spacecraft {
         this.y = y;
     }
 
-    public get X() {
+    public getX(): number {
         return this.x;
     }
 
-    public get Y() {
+    public getY(): number{
         return this.y;
+    }
+
+    public move(xOffset: number, yOffset: number) {
+        this.x + xOffset;
+        this.y + yOffset;
     }
 
     createMessage(): string {
         return 'Starter point Spacecraft CLI';
     }
+
 }

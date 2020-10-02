@@ -4,20 +4,33 @@ import SpaceCraft from './spacecraft';
 
 const spacecraft = new SpaceCraft(0, 0);
 
-let message: string;
-
-message = spacecraft.createMessage();
-
-let running = false;
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout,
-})
-const loop = () => {
-    while (running) {
-        console.log(`X: ${spacecraft.X} Y: ${spacecraft.Y}`);
+const moveSpacecraft = (input: string): boolean => {
+    switch(input) {
+        case "w":
+            spacecraft.move(0, 1);
+            return true;
+        case "s":
+            spacecraft.move(0, -1);
+            return true;
+        case "a":
+            spacecraft.move(-1, 0);
+            return true;
+        case "d":
+            spacecraft.move(1, 0);
+            return true;
+        default:
+            return false;
     }
 }
 
+const stdin = process.openStdin();
 
-console.log(message);
+stdin.on("data", function(d) {
+    if (moveSpacecraft(d)) {
+        const x = spacecraft.getX();
+        const y = spacecraft.getY();
+        console.log(`(${x}, ${y})`)
+    }
+});
+
+console.log(spacecraft.createMessage());
