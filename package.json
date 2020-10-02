@@ -1,0 +1,24 @@
+{
+  "name": "spacecraft-cli",
+  "version": "0.0.1",
+  "description": "A simple CLI Project to solve the Spacecraft problem with typescript",
+  "main": "index.js",
+  "author": "Lucas Pimenta",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^26.0.14",
+    "jest": "^26.4.2",
+    "ts-jest": "^26.4.1",
+    "typescript": "^4.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pyymenta/spacecraft-cli.git"
+  },
+  "keywords": ["typescript", "spacecraft", "help-wanted", "digitalocean", "beginner-friendly", "hacktoberfest", "hacktoberfest2020", "javascript", "cli", "challenge", "jest"],
+  "scripts": {
+    "start": "node dist/cli.js",
+    "build": "tsc --build .tsconfig.json",
+    "test": "jest --no-cache"
+  }
+}
