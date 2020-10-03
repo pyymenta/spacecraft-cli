@@ -21,6 +21,12 @@ describe('Spacecraft', () => {
     const cli = new CLI(process.stdin, process.stdout, spacecraft);
     cli.start();
 
+    afterAll(() => {
+        // Finalize the inputStream
+
+        cli.exit();
+    });
+
     it('starts from Earth', () => {
         expect(spacecraft.x).toBe(Earth.x);
         expect(spacecraft.y).toBe(Earth.y);
@@ -57,8 +63,8 @@ describe('Spacecraft', () => {
     });
 
     it('accelerates correctly', () => {
-        // (0, 5) => (0, 7) => (0, 10) => (0, 14) => (0, 19) 
-        
+        // (0, 5) => (0, 7) => (0, 10) => (0, 14) => (0, 19)
+
         spacecraft.moveForward(1);
         expect(spacecraft.x).toBe(0);
         expect(spacecraft.y).toBe(7);
@@ -76,4 +82,3 @@ describe('Spacecraft', () => {
         expect(spacecraft.y).toBe(19);
     });
 });
-
