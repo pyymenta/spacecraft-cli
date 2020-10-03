@@ -21,7 +21,7 @@ export default class Spacecraft {
   forward(y: number): number {
     return y + 1;
   }
-  vack(y: number): number {
+  back(y: number): number {
     return y - 1;
   }
 
