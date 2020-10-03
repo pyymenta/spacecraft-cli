@@ -1,3 +1,7 @@
+# Let's build a rocket together!
+
+![Rocket](./rocket.png)
+
 # Spacecraft
 
 A simple CLI to solve the Spacecraft Problem, made with [TypeScript](https://www.typescriptlang.org/)
