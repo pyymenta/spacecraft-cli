@@ -1,22 +1,34 @@
 export default class Spacecraft {
+  public x: number = 0;
+  public y: number = 0;
 
-    public x: number = 0;
-    public y: number = 0;
+  public constructor(x: number, y: number) {
+    this.x = x;
+    this.y = y;
+  }
 
-    public constructor(x: number, y: number) {
-        this.x = x;
-        this.y = y;
-    }
+  public get X() {
+    return this.x;
+  }
 
-    public get X() {
-        return this.x;
-    }
+  public get Y() {
+    return this.y;
+  }
 
-    public get Y() {
-        return this.y;
-    }
+  createMessage(): string {
+    return 'Starter point Spacecraft CLI';
+  }
+  forward(y: number): number {
+    return y + 1;
+  }
+  vack(y: number): number {
+    return y - 1;
+  }
 
-    createMessage(): string {
-        return 'Starter point Spacecraft CLI';
-    }
+  left(x: number): number {
+    return x - 1;
+  }
+  right(x: number): number {
+    return x + 1;
+  }
 }
