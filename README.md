@@ -1,5 +1,7 @@
 # Spacecraft
 
+![image](https://travis-ci.org/pyymenta/spacecraft-cli.svg?branch=master)
+
 A simple CLI to solve the Spacecraft Problem, made with [TypeScript](https://www.typescriptlang.org/)
 
 Let's build a rocket together!
