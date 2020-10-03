@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var Spacecraft = (function () {
     function Spacecraft(start, end) {
         this.x = 0;
@@ -31,5 +31,5 @@ var Spacecraft = (function () {
     };
     return Spacecraft;
 }());
-exports["default"] = Spacecraft;
+exports.default = Spacecraft;
 //# sourceMappingURL=spacecraft.js.map

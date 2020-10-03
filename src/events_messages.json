@@ -1,0 +1,29 @@
+{
+    "event_messages": [
+        {
+            "id": "wrong_trajectory",
+            "event": "Ship goes more than 5 points to the left/right",
+            "message": "wrong trajectory"
+        },
+        {
+            "id": "min_speed",
+            "event": "Ship tries to decrease speed < 1",
+            "message": "minimum speed"
+        },
+        {
+            "id": "max_speed",
+            "event": "Ship tries to increase speed > 5",
+            "message": "maximum speed"
+        },
+        {
+            "id": "moon",
+            "event": "Ship reaches (0, 250)",
+            "message": "on the moon"
+        },
+        {
+            "id": "lost",
+            "event": "Ship goes beyond y = 250",
+            "message": "contact lost"
+        }
+    ]
+}
