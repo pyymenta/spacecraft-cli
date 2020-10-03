@@ -79,4 +79,10 @@ export default class CLI {
     launch(): void {
         console.log(`(${this.spacecraft.x}, ${this.spacecraft.y}) spacecraft launched from Earth`);
     }
+
+    exit(): void {
+        console.log("Closing! Goodbye.");
+
+        this.input.destroy()
+    }
 }
