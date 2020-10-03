@@ -8,6 +8,10 @@ cache: yarn
 before_script:
   - yarn install
 
-script:
-  - yarn build
-  - yarn test
+jobs:
+  include:
+    - stage: build
+      script: yarn build
+
+    - stage: test
+      script: yarn test
