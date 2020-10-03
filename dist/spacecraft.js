@@ -1,37 +1,33 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var Spacecraft = (function () {
-    function Spacecraft(x, y) {
+    function Spacecraft(start, end) {
         this.x = 0;
         this.y = 0;
-        this.x = x;
-        this.y = y;
+        this.speed = 0;
+        this.start = start;
+        this.end = end;
+        this.x = this.start.x;
+        this.y = this.start.y;
+        this.prepareLaunch();
     }
-    Object.defineProperty(Spacecraft.prototype, "X", {
-        get: function () {
-            return this.x;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(Spacecraft.prototype, "Y", {
-        get: function () {
-            return this.y;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Spacecraft.prototype.createMessage = function () {
-        return 'Starter point Spacecraft CLI';
+    Spacecraft.prototype.prepareLaunch = function () {
+        this.speed = 1;
     };
-    Spacecraft.prototype.forward = function (y) {
-        return y + 1;
+    Spacecraft.prototype.launch = function () {
+        return this.launched = true;
     };
-    Spacecraft.prototype.left = function (x) {
-        return x - 1;
-    };
-    Spacecraft.prototype.right = function (x) {
-        return x + 1;
+    Spacecraft.prototype.moveForward = function (alterSpeed, sideMovement) {
+        if (alterSpeed === void 0) { alterSpeed = 0; }
+        if (sideMovement === void 0) { sideMovement = 0; }
+        if (sideMovement !== 0)
+            this.x += sideMovement;
+        else if (alterSpeed !== 0) {
+            if (((this.speed + alterSpeed) <= 5) && ((this.speed + alterSpeed) > 0)) {
+                this.speed += alterSpeed;
+            }
+        }
+        this.y += this.speed;
     };
     return Spacecraft;
 }());

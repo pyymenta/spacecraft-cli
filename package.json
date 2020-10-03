@@ -2,7 +2,7 @@
   "name": "spacecraft-cli",
   "version": "0.0.1",
   "description": "A simple CLI Project to solve the Spacecraft problem with typescript",
-  "main": "index.js",
+  "main": "dist/main.js",
   "author": "Lucas Pimenta",
   "license": "MIT",
   "devDependencies": {
@@ -29,7 +29,7 @@
     "jest"
   ],
   "scripts": {
-    "start": "node dist/cli.js",
+    "start": "node dist/main.js",
     "build": "tsc --build .tsconfig.json",
     "test": "jest --no-cache"
   },
