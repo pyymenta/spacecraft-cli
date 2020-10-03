@@ -15,8 +15,7 @@ describe('Spacecraft', () => {
   it('moves right', () => {
     expect(spaceCraft.right(spaceCraft.x)).toEqual(1);
   });
-it('moves bacl', () => {
+  it('moves back', () => {
     expect(spaceCraft.back(spaceCraft.y)).toEqual(-1);
   });
-
 });
