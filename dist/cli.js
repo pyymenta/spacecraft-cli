@@ -1,11 +1,11 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var keyListener_1 = require("./keyListener");
 var CLI = (function () {
     function CLI(input, output, spacecraft) {
         this.input = input;
         this.output = output;
-        this.keyListener = new keyListener_1["default"](this.input);
+        this.keyListener = new keyListener_1.default(this.input);
         this.spacecraft = spacecraft;
         this.bindKeyEvents();
     }
@@ -23,7 +23,7 @@ var CLI = (function () {
                 _this.latestKeyPressed = keyName;
                 communicateFirstMovement();
                 _this.spacecraft.moveForward(1);
-            }
+            },
         });
         var decelerateEvent = this.keyListener.bindEvent({
             keyName: "s",
@@ -66,5 +66,5 @@ var CLI = (function () {
     };
     return CLI;
 }());
-exports["default"] = CLI;
+exports.default = CLI;
 //# sourceMappingURL=cli.js.map

@@ -18,14 +18,6 @@ describe('Moon', () => {
 
 describe('Spacecraft', () => {
     const spacecraft = new SpaceCraft(Earth, Moon);
-    const cli = new CLI(process.stdin, process.stdout, spacecraft);
-    cli.start();
-
-    afterAll(() => {
-        // Finalize the inputStream
-
-        cli.exit();
-    });
 
     it('starts from Earth', () => {
         expect(spacecraft.x).toBe(Earth.x);
@@ -81,4 +73,8 @@ describe('Spacecraft', () => {
         expect(spacecraft.x).toBe(0);
         expect(spacecraft.y).toBe(19);
     });
+    it('does not exceed the maximum speed', () => {
+        spacecraft.moveForward(1);
+        expect(spacecraft.y).toBe(24);
+    }); 
 });

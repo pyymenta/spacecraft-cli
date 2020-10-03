@@ -1,5 +1,6 @@
 import KeyListener from './keyListener';
 import Spacecraft from './spacecraft';
+import events from './events_messages.json';
 
 export default class CLI {
     private input: NodeJS.ReadStream;
@@ -73,11 +74,16 @@ export default class CLI {
     }
 
     start(): void {
-        console.log('(0, 0) ready for launch');
+        this.output.write('(0, 0) ready for launch');
+        events.event_messages.forEach((message) => {
+            this.output.on(message.id, (event) => {
+                this.output.write(message.message);
+            });
+        });
     }
 
     launch(): void {
-        console.log(`(${this.spacecraft.x}, ${this.spacecraft.y}) spacecraft launched from Earth`);
+        this.output.write(`(${this.spacecraft.x}, ${this.spacecraft.y}) spacecraft launched from Earth`);
     }
 
     exit(): void {

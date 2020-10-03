@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var readline = require("readline");
 var KeyListener = (function () {
     function KeyListener(input) {
@@ -37,5 +37,5 @@ var KeyListener = (function () {
     };
     return KeyListener;
 }());
-exports["default"] = KeyListener;
+exports.default = KeyListener;
 //# sourceMappingURL=keyListener.js.map
