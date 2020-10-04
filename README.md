@@ -43,3 +43,9 @@ yarn build
 ```sh
 yarn test
 ```
+
+# License
+
+Copyright (c) 2020 pyymenta
+
+Spacecraft is licensed under the [MIT](LICENSE) license.
