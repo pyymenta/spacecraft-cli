@@ -20,15 +20,15 @@ class CLI {
             }
         };
         const accelerateEvent = this.keyListener.bindEvent({
-            keyName: "w",
+            keyName: 'w',
             handler: (keyName) => {
                 this.latestKeyPressed = keyName;
                 communicateFirstMovement();
                 this.spacecraft.moveForward(1);
-            },
+            }
         });
         const decelerateEvent = this.keyListener.bindEvent({
-            keyName: "s",
+            keyName: 's',
             handler: (keyName) => {
                 this.latestKeyPressed = keyName;
                 communicateFirstMovement();
@@ -36,7 +36,7 @@ class CLI {
             }
         });
         const leftMovementEvent = this.keyListener.bindEvent({
-            keyName: "a",
+            keyName: 'a',
             handler: (keyName) => {
                 this.latestKeyPressed = keyName;
                 communicateFirstMovement();
@@ -44,7 +44,7 @@ class CLI {
             }
         });
         const rightMovementEvent = this.keyListener.bindEvent({
-            keyName: "d",
+            keyName: 'd',
             handler: (keyName) => {
                 this.latestKeyPressed = keyName;
                 communicateFirstMovement();
@@ -52,22 +52,22 @@ class CLI {
             }
         });
         const closeEvent = this.keyListener.bindEvent({
-            keyName: ["c", "x"],
+            keyName: ['c', 'x'],
             ctrl: true,
             handler: function (keyName) {
-                console.log("Closing! Goodbye.");
+                this.output.write('Closing! Goodbye.\n');
                 process.exit(1);
             }
         });
     }
     start() {
-        this.output.write('(0, 0) ready for launch');
+        this.output.write('(0, 0) ready for launch' + '\r\n');
     }
     launch() {
-        this.output.write(`(${this.spacecraft.x}, ${this.spacecraft.y}) spacecraft launched from Earth`);
+        this.output.write(`(${this.spacecraft.x}, ${this.spacecraft.y}) spacecraft launched from Earth\n`);
     }
     exit() {
-        console.log("Closing! Goodbye.");
+        this.output.write('Closing! Goodbye.');
         this.input.destroy();
     }
 }
