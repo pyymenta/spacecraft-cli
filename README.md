@@ -43,3 +43,34 @@ yarn build
 ```sh
 yarn test
 ```
+
+## Contributor 
+
+<a href="https://github.com/pyymenta">
+  <img src="https://avatars0.githubusercontent.com/u/13206817?s=64&v=4" style="margin: 25px">
+</a>
+&nbsp; 
+<a href="https://github.com/DanielVip3">
+  <img src="https://avatars1.githubusercontent.com/u/36603306?s=64&v=4">
+</a>
+&nbsp; 
+<a href="https://github.com/gilsonmandalogo">
+  <img src="https://avatars0.githubusercontent.com/u/6529792?s=64&v=4">
+</a>
+&nbsp; 
+<a href="https://github.com/IJustDev">
+  <img src="https://avatars0.githubusercontent.com/u/43793996?s=64&v=44">
+</a>
+&nbsp; 
+<a href="https://github.com/marcotgs">
+  <img src="https://avatars1.githubusercontent.com/u/20916344?s=64&v=4">
+</a>
+&nbsp; 
+<a href="https://github.com/rickithadi">
+  <img src="https://avatars1.githubusercontent.com/u/17044082?s=64&v=4" width="64">
+</a>
+&nbsp; 
+<a href="https://github.com/danieljo09">
+  <img src="https://avatars3.githubusercontent.com/u/67842986?s=64&v=4" width="64">
+</a>
+&nbsp; 
