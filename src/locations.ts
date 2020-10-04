@@ -1,7 +1,7 @@
 export interface ObjectLocation {
-    x: number,
-    y: number,
-};
+    x: number;
+    y: number;
+}
 
 export const Earth: ObjectLocation = {
     x: 0,
