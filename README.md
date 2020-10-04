@@ -1,6 +1,7 @@
 # Spacecraft
 
 ![image](https://travis-ci.org/pyymenta/spacecraft-cli.svg?branch=master)
+![GitHub contributors](https://img.shields.io/github/contributors/pyymenta/spacecraft-cli)
 
 A simple CLI to solve the Spacecraft Problem, made with [TypeScript](https://www.typescriptlang.org/)
 
