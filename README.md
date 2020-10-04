@@ -43,3 +43,8 @@ yarn build
 ```sh
 yarn test
 ```
+
+https://img.shields.io/github/issues/pyymenta/spacecraft-cli?color=red
+https://img.shields.io/github/forks/pyymenta/spacecraft-cli
+https://img.shields.io/github/stars/pyymenta/spacecraft-cli?color=yellowgreen
+
