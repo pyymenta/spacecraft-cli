@@ -9,10 +9,13 @@ cli.start();
 /* The main loop which shows coordinates after each movement */
 let latestX = 0;
 let latestY = 0;
+let eventMessage = '';
 setInterval(() => {
     if (latestX !== spacecraft.x || latestY !== spacecraft.y) {
         latestX = spacecraft.x;
         latestY = spacecraft.y;
-        console.log(`(${latestX}, ${latestY}) # ${cli.latestKeyPressed.toUpperCase()}`);
+        eventMessage = spacecraft?.event?.message ? `# ${spacecraft.event.message}` : '';
+
+        console.log(`(${latestX}, ${latestY}) # ${cli.latestKeyPressed.toUpperCase()} ${eventMessage}`);
     }
 }, 100);

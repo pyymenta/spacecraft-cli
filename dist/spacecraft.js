@@ -1,5 +1,5 @@
-'use strict';
-Object.defineProperty(exports, '__esModule', { value: true });
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var Spacecraft = (function () {
     function Spacecraft(start, end) {
         this.x = 0;
@@ -18,13 +18,16 @@ var Spacecraft = (function () {
         return (this.launched = true);
     };
     Spacecraft.prototype.moveForward = function (alterSpeed, sideMovement) {
-        if (alterSpeed === void 0) {
-            alterSpeed = 0;
+        if (alterSpeed === void 0) { alterSpeed = 0; }
+        if (sideMovement === void 0) { sideMovement = 0; }
+        console.log('hey');
+        if (sideMovement !== 0) {
+            console.log('hey');
+            var newXPosition = this.x + sideMovement;
+            if (newXPosition > 5 || newXPosition < -5) {
+                console.log('wrong trajectory');
+            }
         }
-        if (sideMovement === void 0) {
-            sideMovement = 0;
-        }
-        if (sideMovement !== 0) this.x += sideMovement;
         else if (alterSpeed !== 0) {
             if (this.speed + alterSpeed <= 5 && this.speed + alterSpeed > 0) {
                 this.speed += alterSpeed;
@@ -33,6 +36,6 @@ var Spacecraft = (function () {
         this.y += this.speed;
     };
     return Spacecraft;
-})();
+}());
 exports.default = Spacecraft;
 //# sourceMappingURL=spacecraft.js.map
