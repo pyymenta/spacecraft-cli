@@ -1,5 +1,6 @@
 import KeyListener from './keyListener';
 import Spacecraft from './spacecraft';
+import Rocket from './rocket';
 
 export default class CLI {
     private input: NodeJS.ReadStream;
@@ -73,6 +74,7 @@ export default class CLI {
     }
 
     start(): void {
+        console.log(Rocket);
         console.log('(0, 0) ready for launch');
     }
 

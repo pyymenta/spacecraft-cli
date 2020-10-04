@@ -1,11 +1,12 @@
-'use strict';
-exports.__esModule = true;
-var keyListener_1 = require('./keyListener');
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var keyListener_1 = require("./keyListener");
+var rocket_1 = require("./rocket");
 var CLI = (function () {
     function CLI(input, output, spacecraft) {
         this.input = input;
         this.output = output;
-        this.keyListener = new keyListener_1['default'](this.input);
+        this.keyListener = new keyListener_1.default(this.input);
         this.spacecraft = spacecraft;
         this.bindKeyEvents();
     }
@@ -59,12 +60,17 @@ var CLI = (function () {
         });
     };
     CLI.prototype.start = function () {
+        console.log(rocket_1.default);
         console.log('(0, 0) ready for launch');
     };
     CLI.prototype.launch = function () {
-        console.log('(' + this.spacecraft.x + ', ' + this.spacecraft.y + ') spacecraft launched from Earth');
+        console.log("(" + this.spacecraft.x + ", " + this.spacecraft.y + ") spacecraft launched from Earth");
+    };
+    CLI.prototype.exit = function () {
+        console.log('Closing! Goodbye.');
+        this.input.destroy();
     };
     return CLI;
-})();
-exports['default'] = CLI;
+}());
+exports.default = CLI;
 //# sourceMappingURL=cli.js.map
