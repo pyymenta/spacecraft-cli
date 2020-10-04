@@ -75,11 +75,6 @@ export default class CLI {
 
     start(): void {
         this.output.write('(0, 0) ready for launch');
-        events.event_messages.forEach((message) => {
-            this.output.on(message.id, (event) => {
-                this.output.write(message.message);
-            });
-        });
     }
 
     launch(): void {
