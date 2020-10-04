@@ -26,8 +26,9 @@ describe('Spacecraft', () => {
         emitterSpy = jest.spyOn(EventEmitter.prototype, 'emit');
         spacecraft = new Spacecraft(Earth, Moon, new SpacecraftEmitter(process.stdout));
     });
-    //    const spacecraft = new SpaceCraft(Earth, Moon, new SpacecraftEmitter(process.stdout));
-    //    const emitterSpy = jest.spyOn(EventEmitter.prototype, 'emit');
+    afterEach(() => {
+        jest.resetAllMocks();
+    })
 
     it('starts from Earth', () => {
         expect(spacecraft.x).toBe(Earth.x);
@@ -120,6 +121,7 @@ describe('Spacecraft', () => {
         spacecraft.moveForward(1)
         expect(emitterSpy).toBeCalledWith('moon', moonEvent)
     });
+
     it('warns lost when it has passed the moon', () => {
         const lostEvent = event_messages.find((message) => message.id === 'lost')
         spacecraft.y = 248;
@@ -127,6 +129,21 @@ describe('Spacecraft', () => {
         spacecraft.moveForward(1)
         expect(emitterSpy).toBeCalledWith('lost', lostEvent)
     });
+
+    it('notifies both wrong_trajectory and max_speed at the same time', () => {
+        const wrongTrajectoryEvent = event_messages.find((message) => message.id === 'wrong_trajectory')
+        const maxSpeedEvent = event_messages.find((message) => message.id === 'max_speed')
+        
+        spacecraft.x = 4;
+        spacecraft.speed = 5
+        spacecraft.moveForward(1);
+        spacecraft.moveForward(0, 1);
+
+        expect(emitterSpy).toBeCalledWith('max_speed', maxSpeedEvent);
+        expect(emitterSpy).toBeCalledWith('wrong_trajectory', wrongTrajectoryEvent)
+        expect(emitterSpy).toBeCalledTimes(3);
+    });
+
 });
 
 

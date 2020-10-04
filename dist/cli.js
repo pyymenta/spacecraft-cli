@@ -55,13 +55,13 @@ class CLI {
             keyName: ['c', 'x'],
             ctrl: true,
             handler: function (keyName) {
-                this.output.write('Closing! Goodbye.\n');
+                console.log('Closing! Goodbye.\n');
                 process.exit(1);
             }
         });
     }
     start() {
-        this.output.write('(0, 0) ready for launch' + '\r\n');
+        this.output.write('(0, 0) ready for launch\n');
     }
     launch() {
         this.output.write(`(${this.spacecraft.x}, ${this.spacecraft.y}) spacecraft launched from Earth\n`);

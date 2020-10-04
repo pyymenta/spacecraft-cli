@@ -20,23 +20,24 @@ class Spacecraft {
     }
     moveForward(alterSpeed = 0, sideMovement = 0) {
         if (sideMovement !== 0) {
-            if (Math.abs(this.x + sideMovement) > 5) {
-                this.spacecraftEmitter.report('wrong_trajectory');
-            }
             this.x += sideMovement;
         }
-        else if (alterSpeed !== 0) {
-            if (this.speed + alterSpeed > 5) {
-                this.spacecraftEmitter.report('max_speed');
-            }
-            if (this.speed + alterSpeed <= 1) {
-                this.spacecraftEmitter.report('min_speed');
-            }
-            if (this.speed + alterSpeed <= 5 && this.speed + alterSpeed > 0) {
-                this.speed += alterSpeed;
-            }
+        if (this.speed + alterSpeed <= 5 && this.speed + alterSpeed > 0) {
+            this.speed += alterSpeed;
         }
         this.y += this.speed;
+        this.reportStatus();
+    }
+    reportStatus() {
+        if (Math.abs(this.x) > 4) {
+            this.spacecraftEmitter.report('wrong_trajectory');
+        }
+        if (this.speed == 5) {
+            this.spacecraftEmitter.report('max_speed');
+        }
+        if (this.speed == 1) {
+            this.spacecraftEmitter.report('min_speed');
+        }
         if (this.y === 250) {
             this.spacecraftEmitter.report('moon');
         }

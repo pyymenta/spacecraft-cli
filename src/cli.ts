@@ -71,14 +71,14 @@ export default class CLI {
 			keyName: ['c', 'x'],
 			ctrl: true,
 			handler: function (keyName) {
-				this.output.write('Closing! Goodbye.\n');
+				console.log('Closing! Goodbye.\n');
 				process.exit(1);
 			}
 		});
 	}
 
 	start(): void {
-        this.output.write('(0, 0) ready for launch' + '\r\n');
+        this.output.write('(0, 0) ready for launch\n');
 	}
 
 	launch(): void {
