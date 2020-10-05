@@ -10,6 +10,9 @@ Let's build a rocket together!
 
 ![image](./rocket.jpg)
 
+## Demo
+![image](https://iili.io/2XVcBV.gif)
+
 ## The Problem
 Say, the Canadian Space Agency is building an unmanned spacecraft that’ll go to the moon. 
 
