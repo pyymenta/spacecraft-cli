@@ -1,46 +1,48 @@
 {
-  "name": "spacecraft-cli",
-  "version": "0.0.1",
-  "description": "A simple CLI Project to solve the Spacecraft problem with typescript",
-  "main": "dist/main.js",
-  "author": "Lucas Pimenta",
-  "license": "MIT",
-  "devDependencies": {
-    "@types/jest": "^26.0.14",
-    "@typescript-eslint/eslint-plugin": "^4.3.0",
-    "@typescript-eslint/parser": "^4.3.0",
-    "eslint": "^7.10.0",
-    "eslint-config-prettier": "^6.12.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "jest": "^26.4.2",
-    "prettier": "^2.1.2",
-    "ts-jest": "^26.4.1",
-    "typescript": "^4.0.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pyymenta/spacecraft-cli.git"
-  },
-  "keywords": [
-    "typescript",
-    "spacecraft",
-    "help-wanted",
-    "digitalocean",
-    "beginner-friendly",
-    "hacktoberfest",
-    "hacktoberfest2020",
-    "javascript",
-    "cli",
-    "challenge",
-    "jest"
-  ],
-  "scripts": {
-    "start": "node dist/main.js",
-    "build": "tsc --build .tsconfig.json",
-    "test": "jest --no-cache",
-    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
-  },
-  "dependencies": {
-    "readline": "^1.3.0"
-  }
+    "name": "spacecraft-cli",
+    "version": "0.0.1",
+    "description": "A simple CLI Project to solve the Spacecraft problem with typescript",
+    "main": "dist/main.js",
+    "author": "Lucas Pimenta",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/jest": "^26.0.14",
+        "@typescript-eslint/eslint-plugin": "^4.3.0",
+        "@typescript-eslint/parser": "^4.3.0",
+        "eslint": "^7.10.0",
+        "eslint-config-prettier": "^6.12.0",
+        "eslint-plugin-prettier": "^3.1.4",
+        "jest": "^26.4.2",
+        "prettier": "^2.1.2",
+        "ts-jest": "^26.4.1",
+        "typescript": "^4.0.3"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/pyymenta/spacecraft-cli.git"
+    },
+    "keywords": [
+        "typescript",
+        "spacecraft",
+        "help-wanted",
+        "digitalocean",
+        "beginner-friendly",
+        "hacktoberfest",
+        "hacktoberfest2020",
+        "javascript",
+        "cli",
+        "challenge",
+        "jest"
+    ],
+    "scripts": {
+        "dev": "ts-node-dev --ignore-watch node_modules src/main.ts",
+        "start": "node dist/main.js",
+        "build": "tsc --build .tsconfig.json",
+        "test": "jest --no-cache",
+        "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
+    },
+    "dependencies": {
+        "readline": "^1.3.0",
+        "ts-node-dev": "^1.0.0-pre.63"
+    }
 }
