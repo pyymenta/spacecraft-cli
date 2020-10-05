@@ -42,6 +42,10 @@ Write a CLI program in your preferred language to simulate the above spacecraft.
 * When the ship reaches `(0, 250)` display `on the moon`.
 * If the ship goes beyond 250 on the y-axis, display `contact lost`.
 
+## Demo
+![image](demo.gif)
+
+
 ## Sample output
 ```
 (0, 0) # Begin with original position.
