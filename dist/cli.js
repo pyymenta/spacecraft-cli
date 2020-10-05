@@ -1,11 +1,12 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var keyListener_1 = require("./keyListener");
+var rocket_1 = require("./rocket");
 var CLI = (function () {
     function CLI(input, output, spacecraft) {
         this.input = input;
         this.output = output;
-        this.keyListener = new keyListener_1["default"](this.input);
+        this.keyListener = new keyListener_1.default(this.input);
         this.spacecraft = spacecraft;
         this.bindKeyEvents();
     }
@@ -18,53 +19,58 @@ var CLI = (function () {
             }
         };
         var accelerateEvent = this.keyListener.bindEvent({
-            keyName: "w",
+            keyName: 'w',
             handler: function (keyName) {
                 _this.latestKeyPressed = keyName;
                 communicateFirstMovement();
                 _this.spacecraft.moveForward(1);
-            }
+            },
         });
         var decelerateEvent = this.keyListener.bindEvent({
-            keyName: "s",
+            keyName: 's',
             handler: function (keyName) {
                 _this.latestKeyPressed = keyName;
                 communicateFirstMovement();
                 _this.spacecraft.moveForward(-1);
-            }
+            },
         });
         var leftMovementEvent = this.keyListener.bindEvent({
-            keyName: "a",
+            keyName: 'a',
             handler: function (keyName) {
                 _this.latestKeyPressed = keyName;
                 communicateFirstMovement();
                 _this.spacecraft.moveForward(0, -1);
-            }
+            },
         });
         var rightMovementEvent = this.keyListener.bindEvent({
-            keyName: "d",
+            keyName: 'd',
             handler: function (keyName) {
                 _this.latestKeyPressed = keyName;
                 communicateFirstMovement();
                 _this.spacecraft.moveForward(0, 1);
-            }
+            },
         });
         var closeEvent = this.keyListener.bindEvent({
-            keyName: ["c", "x"],
+            keyName: ['c', 'x'],
             ctrl: true,
             handler: function (keyName) {
-                console.log("Closing! Goodbye.");
+                console.log('Closing! Goodbye.');
                 process.exit(1);
-            }
+            },
         });
     };
     CLI.prototype.start = function () {
+        console.log(rocket_1.default);
         console.log('(0, 0) ready for launch');
     };
     CLI.prototype.launch = function () {
         console.log("(" + this.spacecraft.x + ", " + this.spacecraft.y + ") spacecraft launched from Earth");
     };
+    CLI.prototype.exit = function () {
+        console.log('Closing! Goodbye.');
+        this.input.destroy();
+    };
     return CLI;
 }());
-exports["default"] = CLI;
+exports.default = CLI;
 //# sourceMappingURL=cli.js.map

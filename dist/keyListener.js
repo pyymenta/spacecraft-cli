@@ -1,5 +1,5 @@
 "use strict";
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 var readline = require("readline");
 var KeyListener = (function () {
     function KeyListener(input) {
@@ -12,7 +12,7 @@ var KeyListener = (function () {
         this.events = events ? events : [];
         readline.emitKeypressEvents(this.input);
         this.input.setRawMode(true);
-        this.input.on("keypress", this.onKeyPressExecuteEvent.bind(this));
+        this.input.on('keypress', this.onKeyPressExecuteEvent.bind(this));
     }
     KeyListener.prototype.bindEvent = function (event) {
         this.events.push(event);
@@ -29,7 +29,9 @@ var KeyListener = (function () {
     };
     KeyListener.prototype.onKeyPressExecuteEvent = function (str, key) {
         var foundRelatedEvent = this.events.find(function (e) {
-            return (Array.isArray(e.keyName) ? e.keyName.includes(key.name) : e.keyName === key.name) && (e.ctrl ? key.ctrl : true) && (e.shift ? key.shift : true);
+            return (Array.isArray(e.keyName) ? e.keyName.includes(key.name) : e.keyName === key.name) &&
+                (e.ctrl ? key.ctrl : true) &&
+                (e.shift ? key.shift : true);
         });
         if (foundRelatedEvent) {
             foundRelatedEvent.handler(key.name, key.ctrl, key.shift);
@@ -37,5 +39,5 @@ var KeyListener = (function () {
     };
     return KeyListener;
 }());
-exports["default"] = KeyListener;
+exports.default = KeyListener;
 //# sourceMappingURL=keyListener.js.map

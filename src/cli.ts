@@ -1,5 +1,6 @@
 import KeyListener from './keyListener';
 import Spacecraft from './spacecraft';
+import Rocket from './rocket';
 
 export default class CLI {
     private input: NodeJS.ReadStream;
@@ -9,7 +10,7 @@ export default class CLI {
     private firstEventCalled: boolean;
     public latestKeyPressed: string;
 
-    public constructor(input: NodeJS.ReadStream, output:  NodeJS.WriteStream, spacecraft: Spacecraft) {
+    public constructor(input: NodeJS.ReadStream, output: NodeJS.WriteStream, spacecraft: Spacecraft) {
         this.input = input;
         this.output = output;
         this.keyListener = new KeyListener(this.input);
@@ -24,10 +25,10 @@ export default class CLI {
                 this.firstEventCalled = true;
                 this.launch();
             }
-        }
+        };
 
         const accelerateEvent = this.keyListener.bindEvent({
-            keyName: "w",
+            keyName: 'w',
             handler: (keyName) => {
                 this.latestKeyPressed = keyName;
                 communicateFirstMovement();
@@ -36,43 +37,44 @@ export default class CLI {
         });
 
         const decelerateEvent = this.keyListener.bindEvent({
-            keyName: "s",
+            keyName: 's',
             handler: (keyName) => {
                 this.latestKeyPressed = keyName;
                 communicateFirstMovement();
                 this.spacecraft.moveForward(-1);
-            }
+            },
         });
 
         const leftMovementEvent = this.keyListener.bindEvent({
-            keyName: "a",
+            keyName: 'a',
             handler: (keyName) => {
                 this.latestKeyPressed = keyName;
                 communicateFirstMovement();
                 this.spacecraft.moveForward(0, -1);
-            }
+            },
         });
 
         const rightMovementEvent = this.keyListener.bindEvent({
-            keyName: "d",
+            keyName: 'd',
             handler: (keyName) => {
                 this.latestKeyPressed = keyName;
                 communicateFirstMovement();
                 this.spacecraft.moveForward(0, 1);
-            }
+            },
         });
 
         const closeEvent = this.keyListener.bindEvent({
-            keyName: ["c", "x"],
+            keyName: ['c', 'x'],
             ctrl: true,
-            handler: function(keyName) {
-                console.log("Closing! Goodbye.");
+            handler: function (keyName) {
+                console.log('Closing! Goodbye.');
                 process.exit(1);
-            }
+            },
         });
     }
 
     start(): void {
+        console.log(Rocket);
         console.log('(0, 0) ready for launch');
     }
 
@@ -81,8 +83,8 @@ export default class CLI {
     }
 
     exit(): void {
-        console.log("Closing! Goodbye.");
+        console.log('Closing! Goodbye.');
 
-        this.input.destroy()
+        this.input.destroy();
     }
 }

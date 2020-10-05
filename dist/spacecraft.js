@@ -15,7 +15,7 @@ var Spacecraft = (function () {
         this.speed = 1;
     };
     Spacecraft.prototype.launch = function () {
-        return this.launched = true;
+        return (this.launched = true);
     };
     Spacecraft.prototype.moveForward = function (alterSpeed, sideMovement) {
         if (alterSpeed === void 0) { alterSpeed = 0; }
@@ -23,7 +23,7 @@ var Spacecraft = (function () {
         if (sideMovement !== 0)
             this.x += sideMovement;
         else if (alterSpeed !== 0) {
-            if (((this.speed + alterSpeed) <= 5) && ((this.speed + alterSpeed) > 0)) {
+            if (this.speed + alterSpeed <= 5 && this.speed + alterSpeed > 0) {
                 this.speed += alterSpeed;
             }
         }
