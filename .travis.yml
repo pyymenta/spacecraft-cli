@@ -10,6 +10,9 @@ before_script:
 
 jobs:
   include:
+    - stage: lint
+      script: yarn run lint
+
     - stage: build
       script: yarn build
 
