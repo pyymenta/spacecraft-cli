@@ -1,4 +1,4 @@
-# Spacecraft
+# Spacecraft-CLI
 
 [![Build status](https://travis-ci.org/pyymenta/spacecraft-cli.svg?branch=master)](https://travis-ci.org/github/pyymenta/spacecraft-cli)
 [![License](https://img.shields.io/github/license/pyymenta/spacecraft-cli)](https://github.com/pyymenta/spacecraft-cli/blob/master/LICENSE)
@@ -8,7 +8,7 @@ A simple CLI to solve the Spacecraft Problem, made with [TypeScript](https://www
 
 Let's build a rocket together!
 
-![Image of a rocket](./rocket.jpg)
+![Image of a rocket](./images/rocket.jpg)
 
 ## The Problem
 
@@ -46,7 +46,7 @@ Write a CLI program in your preferred language to simulate the above spacecraft.
 * If the ship goes beyond 250 on the y-axis, display `contact lost`.
 
 ## Demo
-![image](demo.gif)
+![Demo Example](./images/demo.gif)
 
 
 ## Sample output
@@ -94,12 +94,15 @@ yarn build
 yarn test
 ```
 
-
 ## Contributors
 
 <a href="https://github.com/pyymenta/spacecraft-cli/graphs/contributors">
   <img src="https://contributors-img.web.app/image?repo=pyymenta/spacecraft-cli" />
 </a>
+
+## Docs
+
+- [Contribution Guidelines](./docs/contributor-guidelines.md)
 
 # License
 
