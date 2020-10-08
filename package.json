@@ -39,6 +39,7 @@
         "start": "node dist/main.js",
         "build": "tsc --build .tsconfig.json",
         "test": "jest --no-cache",
+        "test:dev": "jest --no-cache --watchAll",
         "lint": "prettier --write '{src,tests}/**/*.{ts,tsx}' && eslint '{src,tests}/**/*.{ts,tsx}' --quiet --fix",
         "preversion": "yarn lint",
         "version": "git add -A src",
