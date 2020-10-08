@@ -46,8 +46,8 @@ Write a CLI program in your preferred language to simulate the above spacecraft.
 * If the ship goes beyond 250 on the y-axis, display `contact lost`.
 
 ## Demo
-![Demo Example](./images/demo.gif)
 
+![Demo Example](./images/demo.gif)
 
 ## Sample output
 
@@ -62,9 +62,24 @@ Write a CLI program in your preferred language to simulate the above spacecraft.
 (0, 250) on the moon # Ship reaches the moon
 ```
 
-# Getting started
+## Install Globally
 
-## Installation
+
+```sh
+npm i -g spacecraft-app-cli
+```
+
+or
+
+You can run directly with `npx`
+
+```sh
+npx spacecraft-app-cli
+```
+
+## Getting started - Local Development
+
+### Installation
 
 To get started locally, follow these instructions:
 
@@ -73,7 +88,7 @@ To get started locally, follow these instructions:
 3. Make sure that you have `yarn` installed; see instructions [here](https://yarnpkg.com/lang/en/docs/install/).
 4. Run `yarn install` to install dependencies.
 
-## Usage
+### Usage
 
 ```sh
 # starts 🚀 on coordinates (0,0) - Earth
@@ -82,13 +97,13 @@ yarn start
 # Use W, A, S, or D  to starting control 🚀 .
 ```
 
-## Build the CLI bundle
+### Build the CLI bundle
 
 ```sh
 yarn build
 ```
 
-## Run tests
+### Run tests
 
 ```sh
 yarn test
@@ -104,9 +119,8 @@ yarn test
 
 - [Contribution Guidelines](./docs/contributor-guidelines.md)
 
-# License
+## License
 
 Copyright (c) 2020 pyymenta
 
 Spacecraft is licensed under the [MIT](LICENSE) license.
-
