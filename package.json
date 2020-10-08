@@ -38,7 +38,10 @@
         "start": "node dist/main.js",
         "build": "tsc --build .tsconfig.json",
         "test": "jest --no-cache",
-        "lint": "prettier --write '{src,tests}/**/*.{ts,tsx}' && eslint '{src,tests}/**/*.{ts,tsx}' --quiet --fix"
+        "lint": "prettier --write '{src,tests}/**/*.{ts,tsx}' && eslint '{src,tests}/**/*.{ts,tsx}' --quiet --fix",
+        "preversion": "npm run lint",
+        "version": "git add -A src",
+        "postversion": "git push && git push --tags"
     },
     "dependencies": {
         "readline": "^1.3.0"
