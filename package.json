@@ -39,7 +39,7 @@
         "build": "tsc --build .tsconfig.json",
         "test": "jest --no-cache",
         "lint": "prettier --write '{src,tests}/**/*.{ts,tsx}' && eslint '{src,tests}/**/*.{ts,tsx}' --quiet --fix",
-        "preversion": "npm run lint",
+        "preversion": "yarn lint",
         "version": "git add -A src",
         "postversion": "git push && git push --tags"
     },
