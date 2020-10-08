@@ -79,8 +79,6 @@ npx spacecraft-app-cli
 
 ## Getting started - Local Development
 
----
-
 ### Installation
 
 To get started locally, follow these instructions:
