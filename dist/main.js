@@ -9,6 +9,7 @@ const locations_1 = require("./locations");
 const spacecraftEmitter_1 = __importDefault(require("./spacecraftEmitter"));
 const spacecraft = new spacecraft_1.default(locations_1.Earth, locations_1.Moon, new spacecraftEmitter_1.default(process.stdout));
 const cli = new cli_1.default(process.stdin, process.stdout, spacecraft);
+
 cli.start();
 let latestX = 0;
 let latestY = 0;

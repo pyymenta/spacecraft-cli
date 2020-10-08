@@ -1,4 +1,5 @@
 "use strict";
+
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -6,6 +7,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const keyListener_1 = __importDefault(require("./keyListener"));
 class CLI {
     constructor(input, output, spacecraft) {
+
         this.input = input;
         this.output = output;
         this.keyListener = new keyListener_1.default(this.input);
@@ -57,7 +59,7 @@ class CLI {
             handler: function (keyName) {
                 console.log('Closing! Goodbye.\n');
                 process.exit(1);
-            }
+            },
         });
     }
     start() {

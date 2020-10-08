@@ -1,10 +1,10 @@
 import * as readline from 'readline';
 
 export interface Event {
-    keyName: string|string[],
-    ctrl?: boolean,
-    shift?: boolean,
-    handler: (keyName: string, ctrl: boolean, shift: boolean) => void,
+    keyName: string | string[];
+    ctrl?: boolean;
+    shift?: boolean;
+    handler: (keyName: string, ctrl: boolean, shift: boolean) => void;
 }
 
 export default class KeyListener {
@@ -18,7 +18,7 @@ export default class KeyListener {
         readline.emitKeypressEvents(this.input);
         this.input.setRawMode(true);
 
-        this.input.on("keypress", this.onKeyPressExecuteEvent.bind(this));
+        this.input.on('keypress', this.onKeyPressExecuteEvent.bind(this));
     }
 
     bindEvent(event: Event): Event {
@@ -27,7 +27,9 @@ export default class KeyListener {
     }
 
     unbindEvent(event: Event): boolean {
-        const foundRelatedEventIndex = this.events.findIndex(e => e.keyName === event.keyName && e.ctrl === event.ctrl && e.shift === event.shift);
+        const foundRelatedEventIndex = this.events.findIndex(
+            (e) => e.keyName === event.keyName && e.ctrl === event.ctrl && e.shift === event.shift,
+        );
         if (foundRelatedEventIndex >= 0) {
             this.events.splice(foundRelatedEventIndex, 1);
             return true;
@@ -35,8 +37,12 @@ export default class KeyListener {
     }
 
     onKeyPressExecuteEvent(str: string, key: any): void {
-        const foundRelatedEvent = this.events.find(e =>
-            (Array.isArray(e.keyName) ? e.keyName.includes(key.name) : e.keyName === key.name) && (e.ctrl ? key.ctrl : true) && (e.shift ? key.shift : true));
+        const foundRelatedEvent = this.events.find(
+            (e) =>
+                (Array.isArray(e.keyName) ? e.keyName.includes(key.name) : e.keyName === key.name) &&
+                (e.ctrl ? key.ctrl : true) &&
+                (e.shift ? key.shift : true),
+        );
 
         if (foundRelatedEvent) {
             foundRelatedEvent.handler(key.name, key.ctrl, key.shift);

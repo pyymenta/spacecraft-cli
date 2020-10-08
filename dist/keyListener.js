@@ -27,7 +27,7 @@ class KeyListener {
         this.events = events ? events : [];
         readline.emitKeypressEvents(this.input);
         this.input.setRawMode(true);
-        this.input.on("keypress", this.onKeyPressExecuteEvent.bind(this));
+        this.input.on('keypress', this.onKeyPressExecuteEvent.bind(this));
     }
     bindEvent(event) {
         this.events.push(event);

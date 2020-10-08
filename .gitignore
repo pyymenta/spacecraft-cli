@@ -1,1 +1,11 @@
+# Coverage reports
+coverage
+
+# Dependency directory
 node_modules
+
+# OS metadata
+.DS_Store
+
+# Builds
+dist
