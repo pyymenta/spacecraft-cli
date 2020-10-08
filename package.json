@@ -1,5 +1,5 @@
 {
-    "name": "spacecraft-cli",
+    "name": "spacecraft-app-cli",
     "version": "0.0.1",
     "description": "A simple CLI Project to solve the Spacecraft problem with typescript",
     "main": "bin/spacecraft-cli.js",
