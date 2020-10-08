@@ -20,6 +20,7 @@ export default class SpacecraftEmitter {
 		const event_message = event_messages.find((message) => {
 			return message.id === event;
 		});
+
 		if (event_message) {
 			this.eventEmitter.emit(event_message.id, event_message);
 		}
