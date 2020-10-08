@@ -1,7 +1,8 @@
 src
 node_modules
+.github
 .tsconfig.json
-.prettierrc
+.prettierrc.js
 .travis.yml
 jest.config.js
 tests
