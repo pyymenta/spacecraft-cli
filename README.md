@@ -3,7 +3,7 @@
 [![Build status](https://travis-ci.org/pyymenta/spacecraft-cli.svg?branch=master)](https://travis-ci.org/github/pyymenta/spacecraft-cli)
 [![License](https://img.shields.io/github/license/pyymenta/spacecraft-cli)](https://github.com/pyymenta/spacecraft-cli/blob/master/LICENSE)
 [![GitHub contributors](https://img.shields.io/github/contributors/pyymenta/spacecraft-cli)](https://github.com/pyymenta/spacecraft-cli/graphs/contributors)
-![npm version](https://img.shields.io/npm/v/spacecraft-app-cli.svg?style=flat)
+[![npm version](https://img.shields.io/npm/v/spacecraft-app-cli.svg?style=flat)](https://www.npmjs.com/package/spacecraft-app-cli)
 
 A simple CLI to solve the Spacecraft Problem, made with [TypeScript](https://www.typescriptlang.org/)
 
