@@ -5,6 +5,7 @@
     "main": "bin/spacecraft-app-cli.js",
     "author": "Lucas Pimenta",
     "license": "MIT",
+    "bin": "./bin/spacecraft-app-cli.js",
     "devDependencies": {
         "@types/jest": "^26.0.14",
         "@typescript-eslint/eslint-plugin": "^4.3.0",
