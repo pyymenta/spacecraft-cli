@@ -3,7 +3,8 @@ import SpaceCraft from './spacecraft';
 import { Earth, Moon } from './locations';
 import SpacecraftEmitter from './spacecraftEmitter';
 
-const spacecraft = new SpaceCraft(Earth, Moon, new SpacecraftEmitter(process.stdout));
+const spaceCraftEmitter = new SpacecraftEmitter(process.stdout);
+const spacecraft = new SpaceCraft(Earth, Moon, spaceCraftEmitter);
 const cli = new CLI(process.stdin, process.stdout, spacecraft);
 cli.start();
 
