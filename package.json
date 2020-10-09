@@ -1,10 +1,11 @@
 {
-    "name": "spacecraft-cli",
-    "version": "0.0.1",
+    "name": "spacecraft-app-cli",
+    "version": "0.0.4",
     "description": "A simple CLI Project to solve the Spacecraft problem with typescript",
-    "main": "dist/main.js",
+    "main": "bin/spacecraft-app-cli.js",
     "author": "Lucas Pimenta",
     "license": "MIT",
+    "bin": "./bin/spacecraft-app-cli.js",
     "dependencies": {
         "readline": "^1.3.0"
     },
@@ -40,10 +41,14 @@
         "jest"
     ],
     "scripts": {
-        "start": "node dist/main.js",
         "build": "tsc --build .tsconfig.json",
+        "lint": "prettier --write '{src,tests}/**/*.{ts,tsx}' && eslint '{src,tests}/**/*.{ts,tsx}' --quiet --fix",
+        "postversion": "git push && git push --tags",
+        "preversion": "yarn lint",
+        "start": "node dist/main.js",
+        "test:dev": "jest --no-cache --watchAll",
         "test": "jest --no-cache --coverage",
-        "lint": "prettier --write '{src,tests}/**/*.{ts,tsx}' && eslint '{src,tests}/**/*.{ts,tsx}' --quiet --fix"
+        "version": "git add -A src"
     },
     "lint-staged": {
         "src/**/*.{js,ts}": [

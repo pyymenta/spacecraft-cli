@@ -1,5 +1,6 @@
 import KeyListener from './keyListener';
 import Spacecraft from './spacecraft';
+import events from './events_messages.json';
 import Rocket from './rocket';
 
 export default class CLI {
@@ -67,23 +68,23 @@ export default class CLI {
             keyName: ['c', 'x'],
             ctrl: true,
             handler: function (keyName) {
-                console.log('Closing! Goodbye.');
+                console.log('Closing! Goodbye.\n');
                 process.exit(1);
             },
         });
     }
 
     start(): void {
-        console.log(Rocket);
-        console.log('(0, 0) ready for launch');
+        this.output.write(Rocket);
+        this.output.write('(0, 0) ready for launch\n');
     }
 
     launch(): void {
-        console.log(`(${this.spacecraft.x}, ${this.spacecraft.y}) spacecraft launched from Earth`);
+        this.output.write(`(${this.spacecraft.x}, ${this.spacecraft.y}) spacecraft launched from Earth\n`);
     }
 
     exit(): void {
-        console.log('Closing! Goodbye.');
+        this.output.write('Closing! Goodbye.');
 
         this.input.destroy();
     }
