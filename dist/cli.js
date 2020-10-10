@@ -76,7 +76,7 @@ D -> Move Right
 Max Speed - 5 speedunit
 Min Speed - 1 speedunit (after leaving (0, 0))
 
-Predd H -> Show the Ship Refrence Manual
+Press H -> Show the Ship Reference Manual
 Press CTRL + C to Exit
 `);
             }
