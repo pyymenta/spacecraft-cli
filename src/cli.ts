@@ -81,18 +81,22 @@ export default class CLI {
 		const helpEvent = this.keyListener.bindEvent({
 			keyName: ['h'],
 			handler: function (keyName) {
-				console.log(
-`
-Start at Earth(0,0)
-Goal - Moon(0,250)
-Once Started, the Ship moves Forward till it reaches Moon
+				console.log(`
+Start => Earth(0, 0)
+Goal => Moon(0, 250)
+
+Once Launched, the Ship moves Forward 
+
 W -> Increase Forward Speed
 S -> Decrease Forward Speed 
 A -> Move Left
 D -> Move Right
 Max Speed - 5 speedunit
-Min Speed - 1 speedunit (after leaving (0,0))
-Press CTRL + c to Exit`);
+Min Speed - 1 speedunit (after leaving (0, 0))
+
+Predd H -> Show the Ship Refrence Manual
+Press CTRL + C to Exit
+`);
 			}
 		});
 	}
