@@ -1,13 +1,12 @@
 "use strict";
-
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const keyListener_1 = __importDefault(require("./keyListener"));
+const rocket_1 = __importDefault(require("./rocket"));
 class CLI {
     constructor(input, output, spacecraft) {
-
         this.input = input;
         this.output = output;
         this.keyListener = new keyListener_1.default(this.input);
@@ -59,10 +58,27 @@ class CLI {
             handler: function (keyName) {
                 console.log('Closing! Goodbye.\n');
                 process.exit(1);
-            },
+            }
+        });
+        const helpEvent = this.keyListener.bindEvent({
+            keyName: ['h'],
+            handler: function (keyName) {
+                console.log(`
+Start at Earth(0,0)
+Goal - Moon(0,250)
+Once Started, the Ship moves Forward till it reaches Moon
+W -> Increase Forward Speed
+S -> Decrease Forward Speed 
+A -> Move Left
+D -> Move Right
+Max Speed - 5 speedunit
+Min Speed - 1 speedunit (after leaving (0,0))
+Press CTRL + c to Exit`);
+            }
         });
     }
     start() {
+        this.output.write(rocket_1.default);
         this.output.write('(0, 0) ready for launch\n');
     }
     launch() {

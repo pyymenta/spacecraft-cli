@@ -77,6 +77,24 @@ export default class CLI {
 				process.exit(1);
 			}
 		});
+
+		const helpEvent = this.keyListener.bindEvent({
+			keyName: ['h'],
+			handler: function (keyName) {
+				console.log(
+`
+Start at Earth(0,0)
+Goal - Moon(0,250)
+Once Started, the Ship moves Forward till it reaches Moon
+W -> Increase Forward Speed
+S -> Decrease Forward Speed 
+A -> Move Left
+D -> Move Right
+Max Speed - 5 speedunit
+Min Speed - 1 speedunit (after leaving (0,0))
+Press CTRL + c to Exit`);
+			}
+		});
 	}
 
 	start(): void {
