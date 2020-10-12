@@ -23,51 +23,61 @@ export default class CLI {
         const communicateFirstMovement = () => {
             if (!this.firstEventCalled) {
                 this.firstEventCalled = true;
+
                 this.launch();
             }
         };
 
-        const accelerateEvent = this.keyListener.bindEvent({
+        this.keyListener.bindEvent({
             keyName: 'w',
             handler: (keyName) => {
                 this.latestKeyPressed = keyName;
+
                 communicateFirstMovement();
+
                 this.spacecraft.moveForward(1);
             },
         });
 
-        const decelerateEvent = this.keyListener.bindEvent({
+        this.keyListener.bindEvent({
             keyName: 's',
             handler: (keyName) => {
                 this.latestKeyPressed = keyName;
+
                 communicateFirstMovement();
+
                 this.spacecraft.moveForward(-1);
             },
         });
 
-        const leftMovementEvent = this.keyListener.bindEvent({
+        this.keyListener.bindEvent({
             keyName: 'a',
             handler: (keyName) => {
                 this.latestKeyPressed = keyName;
+
                 communicateFirstMovement();
+
                 this.spacecraft.moveForward(0, -1);
             },
         });
 
-        const rightMovementEvent = this.keyListener.bindEvent({
+        this.keyListener.bindEvent({
             keyName: 'd',
             handler: (keyName) => {
                 this.latestKeyPressed = keyName;
+
                 communicateFirstMovement();
+
                 this.spacecraft.moveForward(0, 1);
             },
         });
 
-        const closeEvent = this.keyListener.bindEvent({
+        this.keyListener.bindEvent({
             keyName: ['c', 'x'],
             ctrl: true,
-            handler: function (keyName) {
+            handler: function () {
                 console.log('Closing! Goodbye.\n');
+
                 process.exit(1);
             },
         });
@@ -75,6 +85,7 @@ export default class CLI {
 
     start(): void {
         this.output.write(Rocket);
+
         this.output.write('(0, 0) ready for launch\n');
     }
 
