@@ -84,7 +84,7 @@ export default class CLI {
     }
 
     start(): void {
-        this.output.write(Rocket);
+        console.log(Rocket);
 
         this.output.write('(0, 0) ready for launch\n');
     }
