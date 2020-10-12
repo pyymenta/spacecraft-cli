@@ -1,7 +1,7 @@
 language: nodejs
 
 node_js:
-  - 'node'
+  - "node"
 
 cache: yarn
 
@@ -17,4 +17,8 @@ jobs:
       script: yarn build
 
     - stage: test
-      script: yarn test
+      scripts:
+        - yarn global add codecov
+        - yarn test
+      after_success:
+        - codecov
