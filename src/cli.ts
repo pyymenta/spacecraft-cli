@@ -1,6 +1,5 @@
 import KeyListener from './keyListener';
 import Spacecraft from './spacecraft';
-import events from './events_messages.json';
 import Rocket from './rocket';
 
 export default class CLI {
