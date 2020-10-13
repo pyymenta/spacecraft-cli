@@ -83,9 +83,9 @@ export default class CLI {
         });
 
         this.keyListener.bindEvent({
-			keyName: ['h', '?'],
-			handler: function () {
-				console.log(`
+            keyName: 'h',
+            handler: function () {
+                console.log(`
 Start => Earth(0, 0)
 Goal => Moon(0, 250)
 
@@ -101,8 +101,8 @@ Min Speed - 1 speedunit (after leaving (0, 0))
 Press H -> Show the Ship Reference Manual
 Press CTRL + C to Exit
                 `);
-			}
-		});
+            }
+        });
     }
 
     start(): void {
