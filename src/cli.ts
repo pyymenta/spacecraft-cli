@@ -103,7 +103,7 @@ Press CTRL + C to Exit
 
 	start(): void {
         this.output.write(Rocket);
-        this.output.write('(0, 0) ready for launch\n');
+        this.output.write('Press H for Help \n(0, 0) ready for launch\n');
 	}
 
 	launch(): void {
