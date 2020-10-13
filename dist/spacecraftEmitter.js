@@ -5,9 +5,6 @@ const events_messages_json_1 = require("./events_messages.json");
 class SpacecraftEmitter {
     constructor(output) {
         this.eventEmitter = new events_1.EventEmitter();
-        this.init(output);
-    }
-    init(output) {
         events_messages_json_1.event_messages.forEach((message) => {
             this.eventEmitter.on(message.id, () => {
                 output.write(` ${message.message} `);
