@@ -1,4 +1,3 @@
-import CLI from '../src/cli';
 import { Earth, Moon } from '../src/locations';
 import SpacecraftEmitter from '../src/spacecraftEmitter';
 import { EventEmitter } from 'events';

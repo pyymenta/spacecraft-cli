@@ -16,7 +16,7 @@ export default class SpacecraftEmitter {
         });
     }
 
-    public report(event: string) {
+    public report(event: string): void {
         const event_message = event_messages.find((message) => {
             return message.id === event;
         });

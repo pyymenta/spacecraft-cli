@@ -34,7 +34,7 @@ class KeyListener {
         return event;
     }
     unbindEvent(event) {
-        const foundRelatedEventIndex = this.events.findIndex(e => e.keyName === event.keyName && e.ctrl === event.ctrl && e.shift === event.shift);
+        const foundRelatedEventIndex = this.events.findIndex((e) => e.keyName === event.keyName && e.ctrl === event.ctrl && e.shift === event.shift);
         if (foundRelatedEventIndex >= 0) {
             this.events.splice(foundRelatedEventIndex, 1);
             return true;
@@ -43,7 +43,9 @@ class KeyListener {
             return false;
     }
     onKeyPressExecuteEvent(str, key) {
-        const foundRelatedEvent = this.events.find(e => (Array.isArray(e.keyName) ? e.keyName.includes(key.name) : e.keyName === key.name) && (e.ctrl ? key.ctrl : true) && (e.shift ? key.shift : true));
+        const foundRelatedEvent = this.events.find((e) => (Array.isArray(e.keyName) ? e.keyName.includes(key.name) : e.keyName === key.name) &&
+            (e.ctrl ? key.ctrl : true) &&
+            (e.shift ? key.shift : true));
         if (foundRelatedEvent) {
             foundRelatedEvent.handler(key.name, key.ctrl, key.shift);
         }
