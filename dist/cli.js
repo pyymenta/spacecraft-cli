@@ -84,7 +84,7 @@ Press CTRL + C to Exit
     }
     start() {
         console.log(rocket_1.default);
-        this.output.write('(0, 0) ready for launch\n');
+        this.output.write('(0, 0) ready for launch\nPress H to Show Help\n');
     }
     launch() {
         this.output.write(`(${this.spacecraft.x}, ${this.spacecraft.y}) spacecraft launched from Earth\n`);
