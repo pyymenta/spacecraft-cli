@@ -108,7 +108,7 @@ Press CTRL + C to Exit
     start(): void {
         console.log(Rocket);
 
-        this.output.write('(0, 0) ready for launch\n');
+        this.output.write('(0, 0) ready for launch\nPress H to Show Help\n');
     }
 
     launch(): void {
