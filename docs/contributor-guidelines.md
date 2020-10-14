@@ -30,6 +30,7 @@ If you find an Issue that addresses the problem you're having, please add your o
 PRs to our repositories are always welcome and can be a quick way to get your fix or improvement slated for the next release. In general, PRs should:
 
 - Only fix/add the functionality in question **OR** address wide-spread whitespace/style issues, not both.
+- Work only on your own branch and always keep master in sync with upstream.
 - Address a single concern in the least number of changed lines as possible.
 - Include documentation in the repo on the necessary changes made.
 - Be accompanied by a complete Pull Request template (loaded automatically when a PR is created).
@@ -43,4 +44,3 @@ PRs to our repositories are always welcome and can be a quick way to get your fi
 5. Following any formatting and testing guidelines specific to this repo
 6. Push changes to your fork
 7. Open a PR in our repository and follow the PR template so that we can efficiently review the changes.
-
