@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const keyListener_1 = __importDefault(require("./keyListener"));
 const rocket_1 = __importDefault(require("./rocket"));
+const welcome_1 = __importDefault(require("./welcome"));
 class CLI {
     constructor(input, output, spacecraft) {
         this.input = input;
@@ -83,6 +84,7 @@ Press CTRL + C to Exit
         });
     }
     start() {
+        console.log(welcome_1.default);
         console.log(rocket_1.default);
         this.output.write('(0, 0) ready for launch\nPress H to Show Help\n');
     }
