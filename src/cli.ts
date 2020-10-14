@@ -23,7 +23,6 @@ export default class CLI {
         const communicateFirstMovement = () => {
             if (!this.firstEventCalled) {
                 this.firstEventCalled = true;
-
                 this.launch();
             }
         };
