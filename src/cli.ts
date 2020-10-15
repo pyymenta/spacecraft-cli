@@ -81,13 +81,35 @@ export default class CLI {
                 process.exit(1);
             },
         });
+
+        this.keyListener.bindEvent({
+            keyName: 'h',
+            handler: function () {
+                console.log(`
+Start => Earth(0, 0)
+Goal => Moon(0, 250)
+
+Once Launched, the Ship moves Forward 
+
+W -> Increase Forward Speed
+S -> Decrease Forward Speed 
+A -> Move Left
+D -> Move Right
+Max Speed - 5 speedunit
+Min Speed - 1 speedunit (after leaving (0, 0))
+
+Press H -> Show the Ship Reference Manual
+Press CTRL + C to Exit
+                `);
+            }
+        });
     }
 
     start(): void {
         console.log(Welcome);
         console.log(Rocket);
 
-        this.output.write('(0, 0) ready for launch\n');
+        this.output.write('(0, 0) ready for launch\nPress H to Show Help\n');
     }
 
     launch(): void {
