@@ -48,6 +48,8 @@ export default class KeyListener {
 
         if (foundRelatedEvent) {
             foundRelatedEvent.handler(key.name, key.ctrl, key.shift);
-        } else console.log('Invalid command.\n');
+        } else {
+            console.log('Invalid command.\n');
+        }
     }
 }
