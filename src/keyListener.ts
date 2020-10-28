@@ -10,6 +10,7 @@ export interface Event {
 export default class KeyListener {
     private input: NodeJS.ReadStream;
     private events: Event[] = [];
+    private validKeys: string[] = ['w', 's', 'a', 'd', 'c', 'x', 'h'];
 
     public constructor(input: NodeJS.ReadStream, ...events: Event[]) {
         this.input = input;
@@ -39,6 +40,7 @@ export default class KeyListener {
     onKeyPressExecuteEvent(str: string, key: any): void {
         const foundRelatedEvent = this.events.find(
             (e) =>
+                this.validKeys.includes(key.name) &&
                 (Array.isArray(e.keyName) ? e.keyName.includes(key.name) : e.keyName === key.name) &&
                 (e.ctrl ? key.ctrl : true) &&
                 (e.shift ? key.shift : true),
@@ -46,6 +48,6 @@ export default class KeyListener {
 
         if (foundRelatedEvent) {
             foundRelatedEvent.handler(key.name, key.ctrl, key.shift);
-        }
+        } else console.log('Invalid command.\n');
     }
 }

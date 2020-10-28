@@ -23,6 +23,7 @@ const readline = __importStar(require("readline"));
 class KeyListener {
     constructor(input, ...events) {
         this.events = [];
+        this.validKeys = ['w', 's', 'a', 'd', 'c', 'x', 'h'];
         this.input = input;
         this.events = events ? events : [];
         readline.emitKeypressEvents(this.input);
@@ -43,12 +44,15 @@ class KeyListener {
             return false;
     }
     onKeyPressExecuteEvent(str, key) {
-        const foundRelatedEvent = this.events.find((e) => (Array.isArray(e.keyName) ? e.keyName.includes(key.name) : e.keyName === key.name) &&
+        const foundRelatedEvent = this.events.find((e) => (this.validKeys.includes(key.name)) &&
+            (Array.isArray(e.keyName) ? e.keyName.includes(key.name) : e.keyName === key.name) &&
             (e.ctrl ? key.ctrl : true) &&
             (e.shift ? key.shift : true));
         if (foundRelatedEvent) {
             foundRelatedEvent.handler(key.name, key.ctrl, key.shift);
         }
+        else
+            console.log("Invalid command.\n");
     }
 }
 exports.default = KeyListener;
