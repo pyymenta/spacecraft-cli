@@ -82,8 +82,8 @@ npx spacecraft-app-cli
 
 ### Requirements
 
-* NodeJS 12.16.0
-* Npm 6.14.4
+* NodeJS 12.22.1
+* Npm 6.14.12
 
 ### Installation
 
