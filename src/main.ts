@@ -12,9 +12,9 @@ cli.start();
 let latestX = 0;
 let latestY = 0;
 setInterval(() => {
-    if (latestX !== spacecraft.x || latestY !== spacecraft.y) {
-        latestX = spacecraft.x;
-        latestY = spacecraft.y;
-        console.log(`(${latestX}, ${latestY}) # ${cli.latestKeyPressed.toUpperCase()}`);
-    }
+  if (latestX !== spacecraft.x || latestY !== spacecraft.y) {
+    latestX = spacecraft.x;
+    latestY = spacecraft.y;
+    console.log(`(${latestX}, ${latestY}) # ${cli.latestKeyPressed.toUpperCase()}`);
+  }
 }, 100);
