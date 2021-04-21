@@ -1,24 +1,21 @@
 language: nodejs
 
 node_js:
-  - "node"
-
-cache: yarn
+  - "12"
 
 before_script:
-  - yarn install
+  - npm install
 
 jobs:
   include:
     - stage: lint
-      script: yarn run lint
+      script: npm run lint
 
     - stage: build
-      script: yarn build
+      script: npm build
 
     - stage: test
       scripts:
-        - yarn global add codecov
-        - yarn test
+        - npm test
       after_success:
         - codecov

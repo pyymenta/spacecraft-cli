@@ -80,14 +80,19 @@ npx spacecraft-app-cli
 
 ## Getting started - Local Development
 
+### Requirements
+
+* NodeJS 12.22.1
+* Npm 6.14.12
+
+See [nvm](https://github.com/nvm-sh/nvm) or [asdf](https://github.com/asdf-vm/asdf-nodejs)
+
 ### Installation
 
 To get started locally, follow these instructions:
 
 1. Clone to your local computer using `git`.
 2. Make sure you have Node installed; see instructions [here](https://nodejs.org/en/download/).
-3. Make sure that you have `yarn` installed; see instructions [here](https://yarnpkg.com/lang/en/docs/install/).
-4. Run `yarn install` to install dependencies.
 
 ### Usage
 
@@ -122,6 +127,6 @@ yarn test
 
 ## License
 
-Copyright (c) 2020 pyymenta
+Copyright (c) 2021 pyymenta
 
 Spacecraft is licensed under the [MIT](LICENSE) license.
