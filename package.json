@@ -50,7 +50,7 @@
         "preinstall": "npm run check-node-version",
         "lint": "prettier --write '{src,tests}/**/*.{ts,tsx}' && eslint '{src,tests}/**/*.{ts,tsx}' --quiet --fix",
         "postversion": "git push && git push --tags",
-        "preversion": "yarn lint",
+        "preversion": "npm run lint",
         "start": "node dist/main.js",
         "test:dev": "jest --no-cache --watchAll",
         "test": "jest --no-cache --coverage",
@@ -58,14 +58,14 @@
     },
     "lint-staged": {
         "src/**/*.{js,ts}": [
-            "yarn lint",
+            "npm run lint",
             "git add ."
         ]
     },
     "husky": {
         "hooks": {
             "pre-commit": "lint-staged",
-            "pre-push": "yarn test"
+            "pre-push": "npm test"
         }
     }
 }
