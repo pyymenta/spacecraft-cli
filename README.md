@@ -127,6 +127,6 @@ yarn test
 
 ## License
 
-Copyright (c) 2020 pyymenta
+Copyright (c) 2021 pyymenta
 
 Spacecraft is licensed under the [MIT](LICENSE) license.
