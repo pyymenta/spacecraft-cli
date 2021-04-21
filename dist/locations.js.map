@@ -1,1 +1,1 @@
-{"version":3,"file":"locations.js","sourceRoot":"","sources":["../src/locations.ts"],"names":[],"mappings":";;;AAKa,QAAA,KAAK,GAAmB;IACjC,CAAC,EAAE,CAAC;IACJ,CAAC,EAAE,CAAC;CACP,CAAC;AAEW,QAAA,IAAI,GAAmB;IAChC,CAAC,EAAE,CAAC;IACJ,CAAC,EAAE,GAAG;CACT,CAAC"}
+{"version":3,"file":"locations.js","sourceRoot":"","sources":["../src/locations.ts"],"names":[],"mappings":";;;AAKa,QAAA,KAAK,GAAmB;IACnC,CAAC,EAAE,CAAC;IACJ,CAAC,EAAE,CAAC;CACL,CAAC;AAEW,QAAA,IAAI,GAAmB;IAClC,CAAC,EAAE,CAAC;IACJ,CAAC,EAAE,GAAG;CACP,CAAC"}

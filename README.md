@@ -80,6 +80,11 @@ npx spacecraft-app-cli
 
 ## Getting started - Local Development
 
+### Requirements
+
+* NodeJS 12.16.0
+* Npm 6.14.4
+
 ### Installation
 
 To get started locally, follow these instructions:
