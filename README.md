@@ -82,8 +82,8 @@ npx spacecraft-app-cli
 
 ### Requirements
 
-* NodeJS 12.22.1
-* Npm 6.14.12
+* NodeJS 16.0.0
+* Npm 7.10.0
 
 See [nvm](https://github.com/nvm-sh/nvm) or [asdf](https://github.com/asdf-vm/asdf-nodejs)
 
