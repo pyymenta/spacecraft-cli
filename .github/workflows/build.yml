@@ -25,7 +25,7 @@ jobs:
     - run: npm run build
 
   lint:
-    name: build
+    name: lint
     runs-on: ubuntu-latest
 
     strategy:
@@ -42,7 +42,7 @@ jobs:
     - run: npm run lint
 
   test:
-    name: build
+    name: test
     runs-on: ubuntu-latest
 
     strategy:
