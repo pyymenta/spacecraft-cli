@@ -1,6 +1,6 @@
 # Spacecraft-CLI
 
-![build](https://github.com/pyymenta/spacecraft-cli/workflows/build/badge.svg?branch=main)
+[![Spacecraft CI](https://github.com/pyymenta/spacecraft-cli/actions/workflows/build.yml/badge.svg)](https://github.com/pyymenta/spacecraft-cli/actions/workflows/build.yml)
 [![License](https://img.shields.io/github/license/pyymenta/spacecraft-cli)](https://github.com/pyymenta/spacecraft-cli/blob/master/LICENSE)
 [![GitHub contributors](https://img.shields.io/github/contributors/pyymenta/spacecraft-cli)](https://github.com/pyymenta/spacecraft-cli/graphs/contributors)
 [![npm version](https://img.shields.io/npm/v/spacecraft-app-cli.svg?style=flat)](https://www.npmjs.com/package/spacecraft-app-cli)
