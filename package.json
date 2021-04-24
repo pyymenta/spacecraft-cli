@@ -48,7 +48,7 @@
         "build": "tsc --build .tsconfig.json",
         "check-node-version": "npx check-node-version --print --package",
         "preinstall": "npm run check-node-version",
-        "lint": "prettier --write '{src,tests}/**/*.{ts,tsx}' && eslint '{src,tests}/**/*.{ts,tsx}' --quiet --fix",
+        "lint": "prettier --write '{src,tests}/**/*.{ts,tsx}' && eslint '{src,tests}/**/*.{ts,tsx}' --quiet",
         "postversion": "git push && git push --tags",
         "preversion": "npm run lint",
         "start": "node dist/main.js",
