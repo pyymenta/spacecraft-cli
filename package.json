@@ -45,6 +45,7 @@
     "jest"
   ],
   "scripts": {
+    "audit-dependencies": "npx better-npm-audit audit",
     "build": "tsc --build .tsconfig.json",
     "check-node-version": "npx check-node-version --print --package",
     "preinstall": "npm run check-node-version",
